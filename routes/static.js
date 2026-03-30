@@ -10,3 +10,5 @@ router.use("/js", utilities.handleErrors(express.static(__dirname + "public/js")
 router.use("/images", utilities.handleErrors(express.static(__dirname + "public/images")));
 
 module.exports = router;
+
+
