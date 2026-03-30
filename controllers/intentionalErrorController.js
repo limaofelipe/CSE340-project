@@ -1,3 +1,7 @@
+/**
+ * This controller exists to create an exception for testing
+ */
+
 const intentionalErrorController = {};
 
 intentionalErrorController.causeError = async function(req, res, next) {

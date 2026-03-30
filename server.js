@@ -27,10 +27,8 @@ app.set("layout", "./layouts/layout"); // Not at view root
  * Routes
  *************************/
 app.use(static);
-//Index route
+// Index route
 app.get("/", utilities.handleErrors(baseController.buildHome));
-
-
 // Inventory routes
 app.use("/inv", inventoryRoute);
 // Intentional error route. Used for testing
@@ -39,7 +37,10 @@ app.use("/ierror", intentionalErrorRoute);
 // File Not Found Route - must be last route in list
 app.use(async (req, res, next) => {
   next({status: 404, message: 'Unfortunately, we don\'t have that page in stock.'})
-})/* ***********************
+})
+
+
+/* ***********************
 * Express Error Handler
 * Place after all other middleware
 *************************/
