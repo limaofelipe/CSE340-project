@@ -23,6 +23,7 @@ app.use(expressLayouts);
 app.set("layout", "./layouts/layout"); // Not at view root
 
 
+app.use(express.static("public"))
 /* ***********************
  * Routes
  *************************/
